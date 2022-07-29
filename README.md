@@ -1,6 +1,7 @@
 
-### install
+### prepare
 ```
+git clone <this repo>
 cd js-cep78
 npm i
 ```
