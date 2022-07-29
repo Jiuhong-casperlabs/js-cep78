@@ -20,17 +20,17 @@ const main = async () => {
     constants.PATH_TO_SOURCE_KEYS
   );
 
-  //cep78 contract-hash
+  //=== cep78 contract-hash ===
   const hash1 =
     "62991807466f8b768557ac2d4538614975df54cda74295f9e94435a89365a4f9";
   const contracthashbytearray = new CLByteArray(
     Uint8Array.from(Buffer.from(hash1, "hex"))
   );
-  const contracthash = new CLKey(contracthashbytearray);
+  const nft_contract_hash = new CLKey(contracthashbytearray);
 
   //=== token_owner: Key ===
   const hexString =
-    "01728e64fdedd75ff64858a27abde9c0c5caa5a04564b0953b3ed4988f8102687c";
+    "01728e64fdedd75ff64858a27abde9c0c5caa5a04564b0953b3ed4988f8102687c"; // the installer
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()
@@ -38,14 +38,8 @@ const main = async () => {
 
   const token_owner = new CLKey(accounthash);
 
-  // === token_meta_data: string ===
-  const meta_data_json = {
-    name: "John Doe",
-    symbol: "abc",
-    token_uri: "https://www.barfoo.com",
-  };
-
-  const token_meta_data = new CLString(JSON.stringify(meta_data_json));
+  // === key_name: string ===
+  const key_name = new CLString("mybalance");
 
   let deploy = DeployUtil.makeDeploy(
     new DeployUtil.DeployParams(
@@ -56,11 +50,11 @@ const main = async () => {
       constants.DEPLOY_TTL_MS
     ),
     DeployUtil.ExecutableDeployItem.newModuleBytes(
-      utils.getBinary(constants.PATH_TO_CONTRACT_MINT),
+      utils.getBinary(constants.PATH_TO_CONTRACT_BALANCE),
       RuntimeArgs.fromMap({
-        nft_contract_hash: contracthash,
-        token_owner: token_owner,
-        token_meta_data: token_meta_data,
+        nft_contract_hash,
+        key_name,
+        token_owner,
       })
     ),
     DeployUtil.standardPayment(10000000000)
