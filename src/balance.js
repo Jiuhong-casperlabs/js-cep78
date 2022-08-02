@@ -22,7 +22,7 @@ const main = async () => {
 
   //=== cep78 contract-hash ===
   const hash1 =
-    "62991807466f8b768557ac2d4538614975df54cda74295f9e94435a89365a4f9";
+    "2eacf586c19893ee5cf795a951267f358a7e47b1de81ea49fef19e7bdf514430";
   const contracthashbytearray = new CLByteArray(
     Uint8Array.from(Buffer.from(hash1, "hex"))
   );
@@ -30,7 +30,7 @@ const main = async () => {
 
   //=== token_owner: Key ===
   const hexString =
-    "01728e64fdedd75ff64858a27abde9c0c5caa5a04564b0953b3ed4988f8102687c"; // the installer
+    "01e0834208d0a1d05b00d124b74bb3765a04b9d6fd072727a3a4cc12f125f628bb"; // the installer
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()
@@ -66,3 +66,27 @@ const main = async () => {
 };
 
 main();
+
+// account named_key
+// {
+//     "name": "mybalance",
+//     "key": "uref-8e48a0d40eb1c077f8162ea5ae6146750ae894125440761c309c8a0f1f723960-007"
+// },
+//
+// {
+//     "id": 1,
+//     "jsonrpc": "2.0",
+//     "method": "state_get_item",
+//     "params": {
+//         "state_root_hash": "3fa895acad9c321a49923112111bd91d53312cc4fe79ce3971e41c05547cdf0b",
+//         "key": "uref-8e48a0d40eb1c077f8162ea5ae6146750ae894125440761c309c8a0f1f723960-007"
+//     }
+// }
+//  =>
+//  "stored_value": {
+//             "CLValue": {
+//                 "cl_type": "U64",
+//                 "bytes": "0100000000000000",
+//                 "parsed": 1
+//             }
+//         },

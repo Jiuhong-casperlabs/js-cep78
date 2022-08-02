@@ -5,7 +5,8 @@
   "scripts": {
     "mint": "node -r esm src/mint.js",
     "install": "node -r esm src/install.js",
-    "balance": "node -r esm src/balance.js"
+    "balance": "node -r esm src/balance.js",
+    "balanced": "node -r esm src/balanceByDic.js"
   },
   "keywords": [],
   "author": "",
