@@ -16,15 +16,16 @@ const main = async () => {
   //Step 1: Set casper node client
   const client = new CasperClient(constants.DEPLOY_NODE_ADDRESS);
 
+  // nctl-view-user-account
   //Step 2: Set contract operator key pair
   const keyPairofContract = utils.getKeyPairOfContract(
     constants.PATH_TO_SOURCE_KEYS
   );
 
   //   --session-arg "collection_name:string='enhanced-nft-1'" \
-  const collection_name = new CLString("enhanced-nft-1");
+  const collection_name = new CLString("JH-NFT");
   // --session-arg "collection_symbol:string='ENFT-1'" \
-  const collection_symbol = new CLString("ENFT-1");
+  const collection_symbol = new CLString("JH");
   // --session-arg "total_token_supply:u64='10'" \
   const total_token_supply = new CLU64("10");
   // --------------------
@@ -39,7 +40,7 @@ const main = async () => {
   //
   // --session-arg "ownership_mode:u8='0'" \
   //
-  const ownership_mode = new CLU8("0");
+  const ownership_mode = new CLU8("2");
   //
   // --------------------
   // |   NFTKind   | u8 |

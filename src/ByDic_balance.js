@@ -12,8 +12,8 @@ const main = async () => {
   // method1: get dictionary item by uref
   const dictionary_item_value_1 = await client.getDictionaryItemByURef(
     state_root_hash,
-    "c171fb059cef34de1e954724dcd31a69bdc48bd0967e27987e42e90d171fbc79",
-    "uref-5814fa2fd886d8c82187cf5b5991dbcf16032d4e47ef7d4ccae2633cde31b62d-007"
+    "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37", // account hash
+    "uref-544b4c487d0373c23c04bcae6d6ed3080cb19aa15a50b74bf5a926ed6c3034ca-007" //dictionary uref of balance
   );
   console.log(
     "\n\ndictionary_item_value_1 =>",
@@ -22,10 +22,10 @@ const main = async () => {
 
   // method2: get dictionary item by name
   const contract_hash =
-    "hash-2eacf586c19893ee5cf795a951267f358a7e47b1de81ea49fef19e7bdf514430";
+    "hash-4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2"; //contract hash
   const dictionary_name = "balances";
   const dictionary_item_key =
-    "c171fb059cef34de1e954724dcd31a69bdc48bd0967e27987e42e90d171fbc79";
+    "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37"; // account hash
   const dictionary_item_value_2 = await client.getDictionaryItemByName(
     state_root_hash,
     contract_hash,
@@ -39,3 +39,18 @@ const main = async () => {
 };
 
 main();
+
+// {
+//     "id": 1,
+//     "jsonrpc":"2.0",
+//     "method":"state_get_dictionary_item",
+//      "params": {
+//         "state_root_hash": "932032a9653584642fa728acc95576415d15704da2cfcf372e226b8137b01851",
+//         "dictionary_identifier": {
+//           "URef": {
+//             "seed_uref": "uref-862011b97ffecde0ca664ab66f27a711a64d6609fcebbc8f6d9bcfc6b083fd33-007",
+//             "dictionary_item_key": "0"
+//           }
+//         }
+//       }
+// }

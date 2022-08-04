@@ -17,20 +17,20 @@ const main = async () => {
 
   //Step 2: Set contract operator key pair
   const keyPairofContract = utils.getKeyPairOfContract(
-    constants.PATH_TO_SOURCE_KEYS
+    constants.PATH_TO_SOURCE_KEYS // user 1
   );
 
   //cep78 contract-hash
   const hash1 =
-    "2eacf586c19893ee5cf795a951267f358a7e47b1de81ea49fef19e7bdf514430";
+    "4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2";
   const contracthashbytearray = new CLByteArray(
     Uint8Array.from(Buffer.from(hash1, "hex"))
   );
   const contracthash = new CLKey(contracthashbytearray);
 
-  //=== token_owner: Key ===
+  //=== token_owner: Key (user 2)===
   const hexString =
-    "01e0834208d0a1d05b00d124b74bb3765a04b9d6fd072727a3a4cc12f125f628bb";
+    "015931cd457cedc64d6724033f393ee93201ab2d81d3a598464646d7c05851d923"; //nctl-view-user-account user=2
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()
