@@ -6,21 +6,8 @@ cd js-cep78
 npm i
 ```
 
-### install
+Workflow 
 
-```
-npm run install
-```
+[holder_mode = 0(Accounts)](workflow_holderMode_0.md)
 
-### mint
-```
-npm run mint
-```
-
-### check balance
-```
-npm run balance
-```
-
-### TODO
-the rest entrypoints calling
+[holder_mode = 1(Contracts)](workflow_holderMode_1.md)

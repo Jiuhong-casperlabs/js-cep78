@@ -1,6 +1,6 @@
-### Install contract  (deployer: user 1, holder_mode = 0)
+### Install cep78-contract  (deployer: user 1, holder_mode = 0)
 ```
-npm run install
+npm run installcep78
 ```
 
 "contract-hash"

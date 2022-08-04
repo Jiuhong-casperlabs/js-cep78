@@ -1,4 +1,4 @@
-export const PATH_TO_SOURCE_KEYS = `/home/jh/casper-node/utils/nctl/assets/net-1/users/user-4`;
+export const PATH_TO_SOURCE_KEYS = `/home/jh/casper-node/utils/nctl/assets/net-1/users/user-1`;
 
 // Path to an ERC20 samrt contract wasm file.
 export const PATH_TO_CONTRACT_MINT =
@@ -7,6 +7,10 @@ export const PATH_TO_CONTRACT_MINT =
 
 export const PATH_TO_CONTRACT_CEP78 =
   "/home/jh/caspereco/cep-78-enhanced-nft/contract/target/wasm32-unknown-unknown/release/contract.wasm";
+
+export const PATH_TO_CONTRACTMINTING =
+  "/home/jh/caspereco/cep-78-enhanced-nft/client/minting_contract/target/wasm32-unknown-unknown/release/minting_contract.wasm";
+
 export const PATH_TO_CONTRACT_BALANCE =
   "/home/jh/caspereco/cep-78-enhanced-nft/client/balance_of_session/target/wasm32-unknown-unknown/release/balance_of_call.wasm";
 
