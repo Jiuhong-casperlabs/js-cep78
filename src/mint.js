@@ -28,9 +28,9 @@ const main = async () => {
   );
   const contracthash = new CLKey(contracthashbytearray);
 
-  //=== token_owner: Key (user 2)===
+  //=== token_owner: Key (user 3)===
   const hexString =
-    "015931cd457cedc64d6724033f393ee93201ab2d81d3a598464646d7c05851d923"; //nctl-view-user-account user=2
+    "014f18bc441599a50dfce4b9085487be99fd9afda6e46da5695e354158207ccf3a"; //public key - nctl-view-user-account user=3
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()

@@ -6,9 +6,10 @@
     "mint": "node -r esm src/mint.js",
     "install": "node -r esm src/install.js",
     "balance": "node -r esm src/balance.js",
+    "transfer": "node -r esm src/transfer.js",
     "balanced": "node -r esm src/ByDic_balance.js",
     "ownerd": "node -r esm src/ByDic_tokenowner.js",
-    "transfer": "node -r esm src/transfer.js"
+    "ownedtokensd": "node -r esm src/ByDic_ownedtokens.js"
   },
   "keywords": [],
   "author": "",
