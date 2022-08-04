@@ -22,7 +22,7 @@ const main = async () => {
 
   //cep78 contract-hash
   const hash1 =
-    "4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2";
+    "9c49de9de33d424de344bd044c85d0a8ffcabb50534a9518c05dc2344e090aa5";
   const contracthashbytearray = new CLByteArray(
     Uint8Array.from(Buffer.from(hash1, "hex"))
   );
@@ -30,7 +30,7 @@ const main = async () => {
 
   //=== token_owner: Key (user 3)===
   const hexString =
-    "014f18bc441599a50dfce4b9085487be99fd9afda6e46da5695e354158207ccf3a"; //public key - nctl-view-user-account user=3
+    "015931cd457cedc64d6724033f393ee93201ab2d81d3a598464646d7c05851d923"; //public key - nctl-view-user-account user=2
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()
@@ -59,8 +59,8 @@ const main = async () => {
       utils.getBinary(constants.PATH_TO_CONTRACT_MINT),
       RuntimeArgs.fromMap({
         nft_contract_hash: contracthash,
-        token_owner: token_owner,
-        token_meta_data: token_meta_data,
+        token_owner,
+        token_meta_data,
       })
     ),
     DeployUtil.standardPayment(10000000000)

@@ -27,29 +27,20 @@ const main = async () => {
   //=== token_id: U64 ===
   const token_id = new CLU64(0);
 
-  // === source_key: Key ====
-  const source_account_hash_str =
-    "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37"; // user 3 account-hash - nctl-view-user-account user=3
+  // === operator: Key ====
+  const operator_account_hash_str =
+    "0bbe95e3c8491fa10eccf95999d960da7f3aaaecf0b9d3c899c07f9049e14e59"; // user 1 account-hash
 
-  const source_account_hash_Uint8Array = Uint8Array.from(
-    Buffer.from(source_account_hash_str, "hex")
+  const operator_account_hash_Uint8Array = Uint8Array.from(
+    Buffer.from(operator_account_hash_str, "hex")
   );
-  const source_account_hash = new CLAccountHash(source_account_hash_Uint8Array);
-
-  const source_key = new CLKey(source_account_hash);
-
-  // === target_key: Key ====
-  const target_account_hash_str =
-    "9a870ea7582557f33f15e8ddcfb5660501da88ad5570325af665c37dbc3d1aff"; // user 4 account-hash - nctl-view-user-account user=4
-
-  const target_account_hash_Uint8Array = Uint8Array.from(
-    Buffer.from(target_account_hash_str, "hex")
+  const operator_account_hash = new CLAccountHash(
+    operator_account_hash_Uint8Array
   );
-  const target_account_hash = new CLAccountHash(target_account_hash_Uint8Array);
 
-  const target_key = new CLKey(target_account_hash);
+  const operator_key = new CLKey(operator_account_hash);
+  // ===Args end===
 
-  // Args end
   let deploy = DeployUtil.makeDeploy(
     new DeployUtil.DeployParams(
       keyPairofContract.publicKey,
@@ -60,11 +51,10 @@ const main = async () => {
     ),
     DeployUtil.ExecutableDeployItem.newStoredContractByHash(
       contracthashbytearray,
-      "transfer",
+      "approve",
       RuntimeArgs.fromMap({
         token_id,
-        source_key,
-        target_key,
+        operator: operator_key,
       })
     ),
     DeployUtil.standardPayment(10000000000)

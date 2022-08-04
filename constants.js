@@ -1,4 +1,4 @@
-export const PATH_TO_SOURCE_KEYS = `/home/jh/casper-node/utils/nctl/assets/net-1/users/user-1`;
+export const PATH_TO_SOURCE_KEYS = `/home/jh/casper-node/utils/nctl/assets/net-1/users/user-4`;
 
 // Path to an ERC20 samrt contract wasm file.
 export const PATH_TO_CONTRACT_MINT =

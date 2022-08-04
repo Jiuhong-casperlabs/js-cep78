@@ -45,12 +45,26 @@ main();
 //     "jsonrpc":"2.0",
 //     "method":"state_get_dictionary_item",
 //      "params": {
-//         "state_root_hash": "932032a9653584642fa728acc95576415d15704da2cfcf372e226b8137b01851",
+//         "state_root_hash": "ce8e7988e05820bb6c4477d4a0b81e11b4b78b3a1810e48951f7a9a25564884b",
 //         "dictionary_identifier": {
 //           "URef": {
-//             "seed_uref": "uref-862011b97ffecde0ca664ab66f27a711a64d6609fcebbc8f6d9bcfc6b083fd33-007",
-//             "dictionary_item_key": "0"
+//             "seed_uref": "uref-544b4c487d0373c23c04bcae6d6ed3080cb19aa15a50b74bf5a926ed6c3034ca-007",
+//             "dictionary_item_key": "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37"
 //           }
 //         }
 //       }
 // }
+
+// {
+//     "jsonrpc": "2.0",
+//     "id": 1,
+//     "result": {
+//         "api_version": "1.0.0",
+//         "dictionary_key": "dictionary-d09214f8b47e3699403f2bc835a1bfd3cde1612a2ded276d09ce167dec096f7d",
+//         "stored_value": {
+//             "CLValue": {
+//                 "cl_type": "U64",
+//                 "bytes": "0200000000000000",
+//                 "parsed": 2
+//             }
+//         },

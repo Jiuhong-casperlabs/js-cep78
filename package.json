@@ -7,9 +7,11 @@
     "install": "node -r esm src/install.js",
     "balance": "node -r esm src/balance.js",
     "transfer": "node -r esm src/transfer.js",
+    "approve": "node -r esm src/approve.js",
     "balanced": "node -r esm src/ByDic_balance.js",
     "ownerd": "node -r esm src/ByDic_tokenowner.js",
-    "ownedtokensd": "node -r esm src/ByDic_ownedtokens.js"
+    "ownedtokensd": "node -r esm src/ByDic_ownedtokens.js",
+    "operatord": "node -r esm src/ByDic_tokeOperator.js"
   },
   "keywords": [],
   "author": "",
