@@ -13,7 +13,7 @@ const main = async () => {
   const dictionary_item_value_1 = await client.getDictionaryItemByURef(
     state_root_hash,
     "0", // token identifier 0 / 1 / 2
-    "uref-82b2b29b73260b1b98eaead356166b9855f253c2b6a6213ad07b310e47460bf5-007" //dictionary uref of token_issuers
+    "uref-0d3fa39c1c2a6e032df9f53dc1aa455bca04615ac1ee528e49f795749fb54846-007" //dictionary uref of token_owners
   );
   console.log(
     "\n\ndictionary_item_value_1 =>",
@@ -23,7 +23,7 @@ const main = async () => {
   // // method2: get dictionary item by name
   // const contract_hash =
   //   "hash-4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2"; //contract hash
-  // const dictionary_name = "token_issuers";
+  // const dictionary_name = "token_owners";
   // const dictionary_item_key = "0"; // token identifier 0 / 1 / 2
   // const dictionary_item_value_2 = await client.getDictionaryItemByName(
   //   state_root_hash,
