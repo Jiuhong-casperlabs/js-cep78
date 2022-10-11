@@ -12,8 +12,8 @@ const main = async () => {
   // method1: get dictionary item by uref
   const dictionary_item_value_1 = await client.getDictionaryItemByURef(
     state_root_hash,
-    "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37", // account-hash
-    "uref-a2a6ab18a4decde812e4ff35ccb86f91bf711732fa6d27991573de04e5007b60-007" //dictionary uref of owned_tokens
+    "ab32c6ed39f43ff55febd0e3e8baa31c84929c1bf50a2b48186d6f286e531145", // account-hash
+    "uref-2a6a51bc27db9017865f278ea941fb5e5fae4cfaa81016dd976a7f55acc92eaf-007" //dictionary uref of owned_tokens
   );
 
   console.log("\n\ndictionary_item_value_1 =>");
@@ -22,24 +22,24 @@ const main = async () => {
     console.log(dictionary_item_value_1.CLValue.pop().data.toString());
   }
 
-  // method2: get dictionary item by name
-  const contract_hash =
-    "hash-4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2"; //contract hash
-  const dictionary_name = "owned_tokens";
-  const dictionary_item_key =
-    "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37"; // account-hash
-  const dictionary_item_value_2 = await client.getDictionaryItemByName(
-    state_root_hash,
-    contract_hash,
-    dictionary_name,
-    dictionary_item_key
-  );
+  // // method2: get dictionary item by name
+  // const contract_hash =
+  //   "hash-4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2"; //contract hash
+  // const dictionary_name = "owned_tokens";
+  // const dictionary_item_key =
+  //   "c0bd01f900afddbf23d1b275f5bb967b958ca2515dcbd48bd0dd11eab8e47e37"; // account-hash
+  // const dictionary_item_value_2 = await client.getDictionaryItemByName(
+  //   state_root_hash,
+  //   contract_hash,
+  //   dictionary_name,
+  //   dictionary_item_key
+  // );
 
-  console.log("\n\ndictionary_item_value_2 =>");
+  // console.log("\n\ndictionary_item_value_2 =>");
 
-  while (dictionary_item_value_2.CLValue.size() > 0) {
-    console.log(dictionary_item_value_2.CLValue.pop().data.toString());
-  }
+  // while (dictionary_item_value_2.CLValue.size() > 0) {
+  //   console.log(dictionary_item_value_2.CLValue.pop().data.toString());
+  // }
 };
 
 main();

@@ -12,18 +12,18 @@ const main = async () => {
   // method1: get dictionary item by uref
   const dictionary_item_value_1 = await client.getDictionaryItemByURef(
     state_root_hash,
-    "0", // token identifier 0 / 1 / 2
-    "uref-82b2b29b73260b1b98eaead356166b9855f253c2b6a6213ad07b310e47460bf5-007" //dictionary uref of token_issuers
+    "1", // token identifier 0 / 1 / 2
+    "uref-9fcf8c479d27aae9056c0916b82b537881fb824e1f334f15a154474018451054-007" //dictionary uref of metadata_nft721
   );
   console.log(
     "\n\ndictionary_item_value_1 =>",
-    Buffer.from(dictionary_item_value_1.CLValue.data.data).toString("hex") //account-hash
+    dictionary_item_value_1.CLValue.data //meta data
   );
 
   // // method2: get dictionary item by name
   // const contract_hash =
   //   "hash-4d294d081b0d84338a42e5a911eecb8da3491ff158162173cd15e8a1335736a2"; //contract hash
-  // const dictionary_name = "token_issuers";
+  // const dictionary_name = "metadata_nft721";
   // const dictionary_item_key = "0"; // token identifier 0 / 1 / 2
   // const dictionary_item_value_2 = await client.getDictionaryItemByName(
   //   state_root_hash,
@@ -33,7 +33,7 @@ const main = async () => {
   // );
   // console.log(
   //   "\n\ndictionary_item_value_2 =>",
-  //   Buffer.from(dictionary_item_value_2.CLValue.data.data).toString("hex") //account-hash
+  //   dictionary_item_value_1.CLValue.data  //meta data
   // );
 };
 

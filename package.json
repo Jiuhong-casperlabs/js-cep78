@@ -14,7 +14,9 @@
     "balanced": "node -r esm src/ByDic_balance.js",
     "ownerd": "node -r esm src/ByDic_tokenowner.js",
     "ownedtokensd": "node -r esm src/ByDic_ownedtokens.js",
-    "operatord": "node -r esm src/ByDic_tokeOperator.js"
+    "operatord": "node -r esm src/ByDic_tokeOperator.js",
+    "tokenissuer": "node -r esm src/ByDic_tokenissuer.js",
+    "metadata_nft721": "node -r esm src/ByDic_metadata_nft721.js"
   },
   "keywords": [],
   "author": "",

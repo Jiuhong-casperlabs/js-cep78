@@ -22,7 +22,7 @@ const main = async () => {
 
   //cep78 contract-hash
   const hash1 =
-    "312b8e967fda94c068433aa688b9e13abb15d4c817e844faf32f35b940b7a709";
+    "8c1159fcb53bc8419656d9c9876f17aa346690855d86552a293430876e69896f";
   const contracthashbytearray = new CLByteArray(
     Uint8Array.from(Buffer.from(hash1, "hex"))
   );
@@ -30,7 +30,7 @@ const main = async () => {
 
   //=== token_owner: Key (user 2)===
   const hexString =
-    "0166bec34ca4b21c177e4510fe777e63de7c080d21612910c4ddd9c32aecd103cd"; //public key - nctl-view-user-account user=2
+    "0179bb9a60ed8701d943a724577ebb51c1c28a7e07291468075582dbc75a505bec"; //public key - nctl-view-user-account user=2
 
   const accounthash = new CLAccountHash(
     CLPublicKey.fromHex(hexString).toAccountHash()
