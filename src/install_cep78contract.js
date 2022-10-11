@@ -67,7 +67,7 @@ const main = async () => {
   // --------------------
   //
   // --session-arg "holder_mode:opt_u8='2'" \
-  const holder_mode = new CLOption(Some(new CLU8(1))); //0 -> approve before transfer. 2 -> no approve needed
+  const holder_mode = new CLU8(1); //0 -> approve before transfer. 2 -> no approve needed
   //
   // --------------------
   // | MintingMode | u8 |
